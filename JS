@@ -1,0 +1,25 @@
+//Case of Let
+
+//let variable="hello";
+// variable=97; //possible
+//let variable =99;  // not possible at all
+//variable=8;
+//console.log(variable);
+
+// Case of var
+
+//var t=9;
+// t=77; //possible
+//var t=99;  //possible
+
+//Difference between let and var -->let cannot be redeclared 
+// but var can be -->
+
+
+
+//Case of const -->
+//const c=9;
+//c=99;  // not possible 
+//const c=88; // total not possible
+//console.log(c);
+// For const  you cant redeclare and you cant re assign 
