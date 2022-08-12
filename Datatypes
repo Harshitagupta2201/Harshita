@@ -1,0 +1,29 @@
+//There are two different datatypes 
+//Primitive Data types
+// They are already the part of language 
+
+//number
+//string
+//boolean
+// undefined
+// null
+// symbol
+// bigInt
+
+
+let k=9; // number 
+let c="hello"; // string 
+
+let j=true; // boolean (true and false)
+let h=undefined; //undefined
+let i=null ; // null 
+//let symb=new Symbol();
+
+// User Defined Data types 
+//Array 
+//Object literal   // {name:"Johnny",age:"78"}; // hashmap
+// Set
+// Map()
+
+let array=[1,2,3,[7,8]];
+let obj={name:"johnny",city:["Kanpur","Lucknow"] ,address:{pincode:"2090900"}};
