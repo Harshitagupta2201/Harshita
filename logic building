@@ -1,0 +1,99 @@
+/**If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Find the sum of all the multiples of 3 or 5 below 1000.*/
+let sum=0;
+function sumofmultiples(num){
+  for(let i=1;i<=num;i++){
+    if(i%3==0||i%5==0){
+       sum=sum+i;
+      }
+   }
+   return sum;
+}
+console.log(sumofmultiples(10));
+
+//By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+let fs=0;
+let sum=0;
+function fibonacciseries(num1,num2){
+  for(i=num1;num1<=4000000;i++){
+    let fs=num1+num2;
+    num1=num2;
+    num2=fs;
+    if(num1%2==0){
+   console.log(num1);
+      sum=sum+num1;
+      
+  }}
+  return sum;
+}
+console.log(fibonacciseries(1,2));
+
+returning the number as string using slice method:-
+function createphonenumber(arr){
+   const firsthreedigits=arr.slice(0,3).join("");
+  const secondthreedigits=arr.slice(3,6).join("");
+  const lastthreedigits=arr.slice(6).join("");
+  return "("+firsthreedigits+")"+"-"+secondthreedigits+"-"+lastthreedigits;
+}
+console.log(createphonenumber([1,2,3,4,5,6,7,8,9,0]));
+
+
+//What is the largest prime factor of the number 600851475143 ?
+var number = 600851475143, prime_number = 2;
+
+function find_next_prime_number() {
+    var can_divide = false;
+    var n = 2;
+    if (prime_number === 2) {
+        prime_number++;
+    } else {
+        prime_number += 2;
+    }
+    while (n < prime_number) {
+        if (prime_number % n === 0) {
+            can_divide = true;
+        }
+        n++;
+    }
+    if (can_divide) {
+        find_next_prime_number();
+    }
+}
+
+while (number > 1) {
+    if (number % prime_number === 0) {
+        number /= prime_number;
+    } else {
+        find_next_prime_number();
+    }
+}
+console.log(prime_number);
+
+//Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+sumofsquares=0;
+squreofsum=0;
+function differenceoftwosums(n){
+  for(let i=1;i<=n;i++){
+    sumofsquares=sumofsquares+(i*i);
+  }
+  for(let i=1;i<=n;i++){
+    squreofsum=squreofsum+i;
+  }
+  return difference=(squreofsum*squreofsum)-sumofsquares;
+}
+console.log(differenceoftwosums(100));
+
+**Write a JS code to find the no of digits in a number**
+function digitCount(n){
+ 
+  let count=0;
+  if(n>=1) ++count;
+  while(n/10>=1){
+   n/=10;
+    ++count;
+  }
+    return count;
+  }
+
+console.log(digitCount(56231));
