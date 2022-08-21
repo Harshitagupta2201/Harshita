@@ -98,3 +98,64 @@ function digitCount(n){
 
 console.log(digitCount(56231));
 //By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.What is the 10 001st prime number?
+function isPrime(n) {
+    if (n <= 1) return false;
+    if (n == 2) return true;
+    for (let i = 2; i * i <= n; ++ i) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+
+
+function findNthPrime(N) {
+  let prime = 2;
+  let i = 1;
+  while (i < N) {
+    do {
+        prime ++;
+    } while (!isPrime(prime));
+    i ++;
+  }
+  return prime;
+}
+console.log(findNthPrime(10001));
+
+
+//finidng reverse of the number
+function reversenumber(num){
+  let reverse=0;
+  let digit=0;
+  let isnegative=false;
+  if (num<0){
+    num=Math.abs(num);
+    isnegative=true;
+  }
+  while(num>0){
+    digit=num%10;
+    reverse=(reverse*10)+digit;
+    num=Math.floor(num/10);
+  }
+  if (isnegative){return -(reverse)};
+  return reverse;
+  
+}
+console.log(reversenumber(-123));
+
+//program to insert an element at a particular index
+function insertitem(arr,index,num){
+  let splice=arr.splice(0,index);
+  let push=splice.push(num);
+  let newarray=splice.concat(arr);
+  return newarray;
+}
+console.log(insertitem([1,2,3,4,5,6],2,99));
+
+
+program to find the particular sum of two digits in an array
+      
+var twoSum = function(nums, target) {        let obj = {};        for(let i = 0; i < nums.length; i++){        obj[nums[i]] = i;    }        for(let i = 0; i < nums.length; i++){                let diff = target - nums[i];                if(obj[diff] && i != obj[diff]){                        return [i, obj[diff]];        }            }    
+};
+
+
